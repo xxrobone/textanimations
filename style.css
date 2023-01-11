@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+main {
+    margin: 0 auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    padding: 0 2rem;
+    width: 100%;
+    height: 100vh;
+    background-color: #ededed;
+    display: grid;
+    place-content: center;
+}
+
+section {
+    padding: 4rem 0 1rem;
+    width: 100%;
+    height: 80vh;
+
+}
+
+h2 {
+    font-family: 'Roboto';
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+p {
+    font-family: 'Roboto';
+    margin: 1rem 0;
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    color: black;
+    font-weight: 200;
+    letter-spacing: 2px;
+    line-height: 2rem;
+}
+
+/* ANIMATIONS SECTION */
+
+.animate {
+    animation-play-state: running;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stop {
+    animation-play-state: paused;
+}
+
+span,
+span.textSplit {
+    color: goldenrod;
+    font-weight: 700;
+}
+
+span:nth-child(even) {
+    color:#323232;
+}
+
+/* Slide Animations */
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+	   
+}
+
+.slideInLeft:nth-child(odd) {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    
+}
+
+@keyframes slideInLeft {
+    from {
+        -webkit-transform: translateX(-100vw);
+        transform: translateX(-100vw);
+}
+to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}}
+/* ---------------------- */
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+@keyframes fadeInRight {
+    from {
+    opacity: 0;
+    -webkit-transform: translateX(2.5rem);
+    transform: translateX(2.5rem);
+}
+to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}}
+
+/* -------------------  */
+
+.highlightText:nth-child(odd){  
+-webkit-animation-name: hilight;
+animation-name: hilight;
+background: linear-gradient(to right, #575757 50%, transparent 50%);
+background-size: 200% 100%;
+background-position:right bottom;
+padding:0 10px;
+}
+
+@keyframes hilight{
+0% {
+}
+100% {
+    background-position:left bottom;
+}
+}
+
+
+.fadeInBottom {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+@keyframes fadeInRight {
+    from {
+    opacity: 0;
+    -webkit-transform: translateY(5rem);
+    transform: translateY(5rem);
+}
+to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}}
+
+.slideInTop {
+    -webkit-animation-name: slideInTop;
+    animation-name: slideInTop;
+	   
+}
+
+.slideInTop:nth-child(odd) {
+    -webkit-animation-name: slideInTop;
+    animation-name: slideInTop;
+    
+}
+
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-25vh);
+        transform: translateY(-25vh);
+}
+to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}}
+
+
